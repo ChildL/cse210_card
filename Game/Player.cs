@@ -2,7 +2,7 @@ using System;
 
 namespace card_game
 {
-
+    /// still deciding if I am going to have a class player 
     public class Player
     {
         bool isPlaying = true;
