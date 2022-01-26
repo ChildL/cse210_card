@@ -1,0 +1,15 @@
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/cse210_card
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/cse210_card.deps.json
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/cse210_card.runtimeconfig.json
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/cse210_card.dll
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/ref/cse210_card.dll
+/Users/lisachild/CSE_210/cse210_card/bin/Debug/net6.0/cse210_card.pdb
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.csproj.AssemblyReference.cache
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.AssemblyInfoInputs.cache
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.AssemblyInfo.cs
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.csproj.CoreCompileInputs.cache
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.dll
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/ref/cse210_card.dll
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.pdb
+/Users/lisachild/CSE_210/cse210_card/obj/Debug/net6.0/cse210_card.genruntimeconfig.cache
