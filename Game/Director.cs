@@ -47,15 +47,16 @@ namespace card_game
 
                 
             choice = "";
-            if ((cards[0]._value > cards[1]._value && choice == "h") 
-            || (cards[0]._value < cards[1]._value && choice == "l"))
-            {
-                score += 100;
-            }
+            Console.WriteLine(cards[0]);
+            if ((cards[0]._value > cards[1]._value && choice == "h"))
+            // || (cards[0]._value < cards[1]._value && choice == "l"))
+                {
+                    score += 100;
+                }   
             else
-            {
-                score -= 75;
-            }  
+                {
+                    score -= 75;
+                }  
         }    
         public void DoOutputs()
         {  
