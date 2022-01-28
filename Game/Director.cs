@@ -9,11 +9,12 @@ namespace card_game
         List<Card> cards = new List<Card>();
         bool isPlaying = true;
         int score = 300;
-        int totalscore = 300;
+
         /// Constructs a new instance of Director
         public Director()
         {
-            /// sets up card1 and card2 in a list
+        
+            /// sets up card1 and card2 in a list (this is the other way to get 2 cards)
             for (int i =0; i<2; i++)
             {
                 Card card = new Card();
@@ -21,44 +22,53 @@ namespace card_game
             }
         }
 
-
         public void StartGame()
         {
             while (isPlaying)
-            {
-                GetKeepPlaying();
-                GetChoice();
-                DoScore();
-                
-            
+            {   
+                DoInputs();
+                DoUpdates();
+                DoOutputs();
             }
         }   
     
-        public void GetKeepPlaying()
+        public void DoInputs()
         {
-            Console.WriteLine("Play again? [y,n]" );
-            string PlayCard = Console.ReadLine();
-            isPlaying = (PlayCard == "y");
+            // foreach (Card card in cards)
+            // {
+            cards[0].GetNewCard();  
+            // }      
         }
-        public void DoScore()
-        {
-            if (!isPlaying)
-            {
-                return;
-            }
-            score = 300;
+        public void DoUpdates() 
+        {   
             Player player = new Player();
-            foreach (Card card in cards)
+            string choice = player.PlayerChoice();
+            cards[1].GetNewCard();
+
+                
+            choice = "";
+            if ((cards[0]._value > cards[1]._value && choice == "h") 
+            || (cards[0]._value < cards[1]._value && choice == "l"))
             {
-                card.GetNewCard();
-                {
-                
-                    
-                }
-                
+                score += 100;
             }
-
-
-        }
+            else
+            {
+                score -= 75;
+            }  
+        }    
+        public void DoOutputs()
+        {  
+            if (!isPlaying)
+            {   
+                return;
+            }     
+            
+            Console.WriteLine($"\nYour score is: {score}");
+            Console.Write("\nPlay again? [y,n]  " );
+            string PlayCard = Console.ReadLine();
+            isPlaying = (PlayCard == "y" && score >0);
+        }   
+           
     }
 }

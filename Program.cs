@@ -1,4 +1,4 @@
-﻿using cse210_card;
+﻿using System;
 
 
 namespace card_game
@@ -13,8 +13,10 @@ namespace card_game
         /// </summary>
         /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
-    }
+    {
         Director director = new Director();
         director.StartGame();
+    }
+        
     }
 }        
