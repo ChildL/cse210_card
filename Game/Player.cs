@@ -5,7 +5,7 @@ namespace card_game
     /// still deciding if I am going to have a class player 
     public class Player
     {
-        public string choice = "";
+        public string _choice = "";
 
         public Player()
         {
@@ -15,8 +15,9 @@ namespace card_game
         {    
             
             Console.Write("\nHigher or Lower? [h,l]  " );
-            string choice = Console.ReadLine();
-            return choice;    
+            string _choice = Console.ReadLine();
+            return _choice;   
+             
         }
     }
 

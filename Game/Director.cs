@@ -3,23 +3,22 @@ using System.Collections.Generic;
 
 namespace card_game
 {
+    ///<summary>
     /// The Director starts the game
+    ///</summary>
     public class Director
     {
-        List<Card> cards = new List<Card>();
+        
         bool isPlaying = true;
         int score = 300;
+        int card1;
+        int card2;
+        string choice;
 
         /// Constructs a new instance of Director
         public Director()
         {
         
-            /// sets up card1 and card2 in a list (this is the other way to get 2 cards)
-            for (int i =0; i<2; i++)
-            {
-                Card card = new Card();
-                cards.Add(card);
-            }
         }
 
         public void StartGame()
@@ -34,29 +33,32 @@ namespace card_game
     
         public void DoInputs()
         {
-            // foreach (Card card in cards)
-            // {
-            cards[0].GetNewCard();  
-            // }      
+            Card card = new Card();
+            card.GetNewCard();
+            card1 = card._value1;    
+                 
         }
         public void DoUpdates() 
         {   
             Player player = new Player();
             string choice = player.PlayerChoice();
-            cards[1].GetNewCard();
-
+           
+            
+            Card card = new Card();
+            card.GetNextCard();
+            card2 = card._value2; 
+           
+           
+            if ((card1 < card2 && choice == "h") 
+            || (card1 > card2 && choice == "l"))
+            {
+                score += 100;
                 
-            choice = "";
-            Console.WriteLine(cards[0]);
-            if ((cards[0]._value > cards[1]._value && choice == "h"))
-            // || (cards[0]._value < cards[1]._value && choice == "l"))
-                {
-                    score += 100;
-                }   
+            }   
             else
-                {
-                    score -= 75;
-                }  
+            {
+                score -= 75;
+            }  
         }    
         public void DoOutputs()
         {  
