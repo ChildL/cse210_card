@@ -2,15 +2,24 @@ using System;
 
 namespace card_game
 {
-    /// still deciding if I am going to have a class player 
-    public class Player
+    /// <summary>
+    /// <para> The player makes a choice if the card is high or low.</para>
+    ///</summary>
+        public class Player
     {
         public string _choice = "";
 
+        /// <summary>
+        /// Constructs a new instance of a player. 
+        /// </summary>
         public Player()
         {
            
         }
+
+        /// <summary>
+        /// Gets the input from the player and stores the choice in a variable. 
+        /// </summary>
         public string PlayerChoice()
         {    
             
